@@ -24,6 +24,12 @@ public class DemoApplication implements CommandLineRunner {
 	@Autowired
 	WarehouseRepository warehouseRepository;
 
+	/**
+	 * This method will load data into database on server start.
+	 *
+	 * @param args
+	 * @throws Exception
+	 */
 	@Override
 	public void run(String... args) throws Exception {
 		logger.info("Mock data persist operation has been started...");

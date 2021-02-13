@@ -10,6 +10,13 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+/**
+ * <h1>CarMgmtController class</h1>
+ * The CarMgmtController class has responsible to handle all request for this service. This class has two end point for
+ * manage the car inventory into the warehouse. 1) get all cars from first mapping /cars/allCars 2) Save or Update data
+ * into the warehouse by using endpoint mapping /cars/addCars.
+ * <p>
+ */
 @RestController
 @RequestMapping(path = "/cars")
 public class CarMgmtController {
