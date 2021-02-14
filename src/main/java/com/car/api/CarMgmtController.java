@@ -44,7 +44,7 @@ public class CarMgmtController {
      * @return ResponseEntity<Warehouses></>
      */
     @PostMapping(path = "/addCars")
-    private ResponseEntity<Warehouses> saveOrUpdateCarsIntoWarehouses(@RequestBody Warehouses[] warehouses) {
+    private ResponseEntity<Warehouses> saveOrUpdateCarsIntoWarehouses(@RequestBody List<Warehouses> warehouses) {
         logger.info("save cars into warehouse");
         carsManagementServices.saveOrUpdateCarsIntoWarehouses(warehouses);
         return new ResponseEntity(warehouses, HttpStatus.OK);

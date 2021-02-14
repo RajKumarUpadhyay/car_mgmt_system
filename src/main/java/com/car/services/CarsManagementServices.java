@@ -29,10 +29,10 @@ public class CarsManagementServices {
         return warehousesList;
     }
 
-    public Warehouses[] saveOrUpdateCarsIntoWarehouses(Warehouses[] warehouses) {
+    public List<Warehouses> saveOrUpdateCarsIntoWarehouses(List<Warehouses> warehouses) {
         logger.info("save records into database....");
         try {
-            Arrays.asList(warehouses).forEach(warehouseData -> {
+            warehouses.forEach(warehouseData -> {
                 warehouseRepository.save(warehouseData);
             });
         } catch (Exception exception) {
